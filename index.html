@@ -5,41 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vent - Your Personal Journaling App</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; text-align: center; }
-        h1 { font-size: 3em; margin-bottom: 20px; font-weight: 300; }
-        .subtitle { font-size: 1.2em; margin-bottom: 40px; opacity: 0.9; }
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 40px 0; }
-        .feature { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); }
-        .feature h3 { margin-top: 0; color: #ffd700; }
-        .cta { margin: 40px 0; }
-        .cta a { display: inline-block; background: #ff6b6b; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: transform 0.3s; }
-        .cta a:hover { transform: translateY(-2px); }
-        .footer { margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2); }
-        .footer a { color: #ffd700; text-decoration: none; margin: 0 15px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            background: linear-gradient(135deg, #8B7EF8 0%, #7B6EE7 100%);
+            color: white; 
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 60px 20px; 
+            text-align: center; 
+        }
+        h1 { 
+            font-size: 4em; 
+            margin-bottom: 20px; 
+            font-weight: 700; 
+            letter-spacing: -0.02em;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .subtitle { 
+            font-size: 1.3em; 
+            margin-bottom: 50px; 
+            opacity: 0.9; 
+            font-weight: 300;
+            font-style: italic;
+        }
+        .features { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+            margin: 60px 0; 
+        }
+        .feature { 
+            background: rgba(255,255,255,0.15); 
+            padding: 40px 30px; 
+            border-radius: 22px; 
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+        }
+        .feature h3 { 
+            margin-bottom: 15px; 
+            color: white; 
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        .feature p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        .cta { 
+            margin: 60px 0; 
+        }
+        .cta a { 
+            display: inline-block; 
+            background: white; 
+            color: #8B7EF8; 
+            padding: 18px 40px; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            font-weight: 700; 
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        .cta a:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+        }
+        .footer { 
+            margin-top: 80px; 
+            padding-top: 40px; 
+            border-top: 1px solid rgba(255,255,255,0.2); 
+        }
+        .footer a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 20px; 
+            font-weight: 500;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .footer a:hover { 
+            opacity: 1; 
+        }
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="app-icon">��</div>
         <h1>Vent</h1>
         <p class="subtitle">Not therapy, just a place to Vent.</p>
         
         <div class="features">
             <div class="feature">
                 <h3>📝 Personal Journaling</h3>
-                <p>Write freely about your thoughts, feelings, and experiences in a safe, private space.</p>
+                <p>Write freely about your thoughts, feelings, and experiences in a safe, private space. Your entries stay on your device.</p>
             </div>
             <div class="feature">
                 <h3>�� AI Chat Companions</h3>
-                <p>Chat with Lottie (supportive) or Dottie (blunt) for different perspectives on your thoughts.</p>
+                <p>Chat with Lottie (supportive) or Dottie (blunt) for different perspectives on your thoughts and feelings.</p>
             </div>
             <div class="feature">
                 <h3>�� Beautiful Themes</h3>
-                <p>Choose from 5 stunning themes including Midnight, Ocean, Forest, Sunset, and Vent.</p>
+                <p>Choose from 5 stunning themes: Midnight, Ocean, Forest, Sunset, and Vent. Each with its own personality.</p>
             </div>
             <div class="feature">
                 <h3>🔒 Privacy First</h3>
-                <p>All your data stays on your device. Face ID protection available. Nothing is shared.</p>
+                <p>All your data stays on your device. Face ID protection available. Nothing is shared or uploaded.</p>
             </div>
         </div>
         
